@@ -1,0 +1,237 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="./node_modules/materialize-css/dist/css/materialize.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/user.css">
+    <link rel="stylesheet" href="css//milijunas.css">
+    <link rel="stylesheet" href="./css/themeGame.css">
+    <link rel="stylesheet" href="./css/quickOne.css">
+    <link rel="shortcut icon" href="./assets/icons8-help-100.png">
+    <title>Quiz Me</title>
+</head>
+<body>
+
+    <div class="wrapper background">
+
+        <div class="center container">
+
+            <!-- <div class="lds-ring"><div></div><div></div><div></div><div></div></div> -->
+
+            <!-- <div id="user" class="grey lighten-3"> 
+
+                <div class="user--data"> 
+                    <div class="user--data__profileInfo"> 
+                            <img src="./assets/head-659651_1920.png" class="avatar">
+                            <p>user: <span style="font-weight: 600;" id="username">%username%</span></p>
+                    </div>
+
+                    <div class="user--data__profileStats"> 
+                        <div class="profileStates--container">
+                            <p style="display: inline-block; margin-bottom: 0.5rem;">Best Score: <span id="best-score"  style="font-weight: 600;">%score%</span></p>
+                            <a id="btn-logout" class="waves-effect waves-light btn red darken-1">LogOut</a>
+                        </div>
+                    </div> 
+                </div>
+
+                <div class="user--options">  
+                    <div class="user--options__container">
+                        <dvi class="game--types">
+                            <h4>Choose game type:</h4>
+                            <p id="game--info" style="color: #eee;">Game description for millionaire game</p>
+                            <form>
+                                <div class="inputGroup">                           
+                                    <input id="mill-radio" name="radio" type="radio" checked onclick="checkRadios()"/>
+                                    <label for="mill-radio">Millionaire</label>
+                                </div>
+                                <label for="gamecategory">Choose a category:</label>
+
+                                    <select id="gamecategory">
+                                    <option value = "anyCategory" selected>Any Category</option>
+                                    <option value = "generalKnowledge">General Knowledge</option>
+                                    <option value = "entertainmentBooks">EntertainmentBooks</option>
+                                    <option value = "entertainmentFilm">Entertainment: Film</option>
+                                    <option value = "entertainmentMusic">Entertainment: Music</option>
+                                    <option value = "entertainmentMusicals&Theatres">Entertainment: Musicals & Theatres</option>
+                                    <option value = "entertainmentTelevision">Entertainment: Television</option>
+                                    <option value = "entertainmentVideoGames">Entertainment: Video Games</option>
+                                    <option value = "entertainmentBoardGames">Entertainment: Board Games</option>
+                                    <option value = "scienceAndNature">Science and Nature</option>
+                                    <option value = "scienceComputers">Science Computers</option>
+                                    <option value = "scienceMathematics">Science Mathematics</option>
+                                    <option value = "mythologoy">Mythology</option>
+                                    <option value = "sports">Sports</option>
+                                    <option value = "geography">Geography</option>
+                                    <option value = "history">History</option>
+                                    <option value = "politics">Politics</option>
+                                    <option value = "art">Art</option>
+                                    <option value = "celebrities">Celebrities</option>
+                                    <option value = "animals">Animals</option>
+                                    <option value = "vehicles">Vehicles</option>
+                                    <option value = "entertainmentComics">Entertainment: Comics</option>
+                                    <option value = "entertainmentJapaneseAnime&Manga">Entertainment: Japanese Anime & Manga</option>
+                                    <option value = "entertainmentCartoon&Animations">Entertainment: Cartoon & Animations</option>
+                                    </select>
+                                <div class="inputGroup">
+                                    <input id="quick-radio" name="radio" type="radio" onclick="checkRadios()"/>
+                                    <label for="quick-radio">Quick One</label>
+                                </div>
+                            </form>
+                            <button id="btn--play" class="waves-effect waves-light btn blue accent-3">PLAY!</button>
+                        </dvi>
+                    </div>
+                </div>
+            </div> -->
+
+                <!-- <div id="game--millionaire"  class="grey lighten-3">
+                    <div class="game--container">
+                        <div class="millionaire--description">
+                            <div class="progress">
+                                <p class="progress--statusText">Question %numOfCurrentQuestion% / %totalQuestionsNum%</p>
+                                <div class="progress--statusBar"><div class="progress--statusBarDiv"></div></div>
+                            </div>
+                            <button id="btn--quitMillionaire" class="waves-effect waves-light btn btn-medium red darken-2">QUIT!</button>
+                        </div>
+                        <div class="millionaire--questions__wrapper">
+                            <h3 class="millionaire--question">Question</h3>
+                            <div class="millionaire--questions__answers">
+                                <div class="mill--answer ans1">
+                                    %Ans1%
+                                </div>
+                                <div class="mill--answer ans2">
+                                    %Ans2%
+                                </div>
+                                <div class="mill--answer ans3">
+                                    %Ans3%
+                                </div>
+                                <div class="mill--answer ans4">
+                                    %Ans3%
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+    
+                <!-- <div id="game--quickOne">
+                    <h1>quickone game</h1>
+                    <button id="btn--quitQuickOne" class="waves-effect waves-light btn btn-medium red darken-2">QUIT!</button>
+
+                </div>
+             -->
+            
+            <!-- <div class="modals">
+
+                <a data-target="modal-login" class="waves-effect waves-light btn btn-large blue lighten-2 modal-trigger">LogIn</a>
+                <a data-target="modal-signup" class="waves-effect waves-light btn btn-large red lighten-1 modal-trigger">SignUp</a>
+
+                <div id="modal-login" class="modal">
+                    <div class="modal-content">
+                        <i class="large material-icons">perm_identity</i>
+                        <form id="login-form">
+                            <div class="input-field">
+                                <input  id="emailLogin" type="email" class="validate" required>
+                                <label class="active" for="username" style="display: inline-block;">Email</label>
+                            </div>
+                            <div class="input-field">
+                                <input  id="passwordLogin" type="text" class="validate" required>
+                                <label class="active" for="password"style="display: inline-block;">Password</label>
+                            </div>  
+                            <div class="modal-footer">
+                                <a data-target="modal-changePass" class="btn-forgotPass modal-close waves-effect waves-green btn-flat modal-trigger">Forgot password?</a>
+                                <button id="btn-login" class="btn btn-large waves-effect waves-light green lighten-1">login</button>   
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div id="modal-changePass" class="modal">
+                    <div class="modal-content">
+                        <p>Reset password using your e-mail</p>
+                    <input class="validate" type="email" id="email-forReset" required>
+                    <a class="btn btn-medium waves-effect waves-light green lighten-2" id="btn-submitEmail">Submit</a>
+                    </div>
+                </div>
+
+                <div id="modal-signup" class="modal">
+                    <div class="modal-content">
+                        <i class="large material-icons">person_add</i>
+                        <form id="signup-form">
+                            <div class="input-field">
+                                <input  id="usernameSignup" type="text" class="validate" required>
+                                <label class="active" for="username" style="display: inline-block;">Username</label>
+                            </div>
+                            <div class="input-field">
+                                <input  id="emailSignup" type="email" class="validate" required>
+                                <label class="active" for="Email"style="display: inline-block;">Email</label>
+                            </div>
+                            <div class="input-field">
+                                <input  id="passwordSignup" type="text" class="validate" required>
+                                <label class="active" for="password"style="display: inline-block;">Password</label>
+                            </div>  
+                            <button id="btn-signup" class="btn btn-large waves-effect waves-light green lighten-1">Signup</button>    
+                        </form>
+                    </div>
+                </div>
+            </div> -->
+            
+        </div>
+    </div>
+    
+<script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-auth.js"></script>
+<script src="./node_modules/materialize-css/dist/js/materialize.min.js"></script>
+<script
+  src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+  integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="
+  crossorigin="anonymous"></script>
+
+<script>
+    const firebaseConfig = {
+        apiKey: "AIzaSyD_j0DNn2HswGvsWa2hUQuHAzdCA7Ky9co",
+        authDomain: "quiz-game-b9909.firebaseapp.com",
+        databaseURL: "https://quiz-game-b9909.firebaseio.com",
+        projectId: "quiz-game-b9909",
+        storageBucket: "quiz-game-b9909.appspot.com",
+        messagingSenderId: "902319152718",
+        appId: "1:902319152718:web:5f78e1d29400986013ed1f",
+        measurementId: "G-QVRR1Y7PL6"
+    };
+     
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+    const auth = firebase.auth();   
+
+    openModal = (id) => {
+        const elem = document.getElementById(id);
+        const instance = M.Modal.init(elem, {dismissible: false});
+        instance.open();
+    };
+
+    closeModal = (id) => {
+        const elem = document.getElementById(id);
+        const instance = M.Modal.init(elem, {dismissible: false});
+        instance.close();
+    };
+
+    checkRadios = () => {
+        const selectWrappers = Array.from(document.querySelectorAll('.select-wrapper'))
+        if(document.querySelector('#gameTheme-radio').checked) {
+            document.querySelector('#game--info').innerHTML = 'Choose your favourite category and set new Best to Beat result!';
+            selectWrappers.forEach(el => el.style.display = 'block');
+        } else {
+            document.querySelector('#game--info').innerHTML = 'Your favourite millionaire game! Get that money!';
+            selectWrappers.forEach(el => el.style.display = 'none');
+        }
+    };
+
+</script>
+<script src="./node_modules/axios/dist/axios.js"></script>
+<script src="./js/templates.js"></script>
+<script src="./js/app.js"></script>
+
+</body>
+</html>

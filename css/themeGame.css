@@ -1,0 +1,239 @@
+#themeGame {
+    width: 100%;
+    height: 100vh;
+}
+
+p {
+    display: inline-block;
+    font-size: 1.6rem;
+    padding: 15px;
+}
+
+.game--container {
+    color: #eee;
+    position: relative;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background: #134e5e; 
+    background: -webkit-linear-gradient(to right, #134e5e, #71b280); 
+    background: linear-gradient(to right, #134e5e, #71b280); 
+    background-size: cover;
+    z-index: 0;
+}
+
+.themeGame--description {
+    position: relative;
+    width: 100%;
+    height: 30%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-flow: column;
+}
+
+.timer {
+    position: absolute;
+    font-size: 2rem;
+    font-weight: 600;
+    padding: .5rem;
+    top: 2rem;
+    left: 2rem;
+}
+
+.progress {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    width: 70%;
+    height: 80%;
+    margin: 0 auto;
+    margin-top: 1rem;
+    background-color: transparent;
+}
+
+.progress p {
+    position: absolute;
+    display: inline-block;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.progress--statusBar {
+    width: 40%;
+    height: 4rem;
+} 
+
+.progress--statusBarDiv {
+    width: 0%;
+    height: 100%;
+    background-color: #2979ff;
+    border: 1px solid #2979ff;
+    border-radius: 6px;
+    transition: all .2s ease-in;
+
+}
+
+.themeGame--questions__wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-flow: column;
+    
+}
+
+.themeGame--question {
+    font-weight: 400;
+}
+
+.themeGame--questions__answers {
+    width: 50%;
+    height: 60%;
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr ;
+    grid-template-areas:
+        "ans1 ans2"
+        "ans3 ans4";
+    margin: 0 auto;  
+}
+
+.question--answer {
+    height: 100%;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .2s ease-out;
+    background-color: rgba(41, 121, 255, .7);
+    font-size: 1.6rem;
+}
+
+.correct--answers__display {
+    width: 1%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(60, 216, 60, .6);
+    transition: all .3s ease-out;
+}
+
+.incorrect--answers__display {
+    width: 1%;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(240, 14, 6, .6);
+    transition: all .3s ease-out;
+}
+
+.question--answer:hover {
+    transform: scale(1.04);
+}
+
+.ans1 {
+    grid-area: ans1;
+}
+.ans2 {
+    grid-area: ans2;
+}
+.ans3 {
+    grid-area: ans3;
+}
+.ans4 {
+    grid-area: ans4;
+}
+
+#btn--quitThemeGame {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    width: 7rem;
+    height: 3rem;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.correct {
+    background-color: rgba(60, 216, 60, .6);
+}
+
+.incorrect {
+    background-color: rgba(240, 14, 6, .6);
+}
+
+#modal--stats {
+    height: 60%;
+    width: 50%;
+    background-color: #eee;
+    box-shadow: 7px 7px 19px 5px rgba(0,0,0, .42);;
+    z-index: 3;
+}
+
+.modal--stats__content {
+    width: 100%;
+    height: 80%;
+    padding: 20px;
+    font-size: 2rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(204, 130, 33);
+}
+
+.modal--stats__content p {
+    display: block;
+    font-size: 2rem;
+}
+
+.current--score, 
+.personalbest--score,
+.best--score {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.btn-exit {
+    position: absolute;
+    background-color: rgba(41, 121, 255, .7);
+    font-size: 1.3rem;
+    width: 8rem;
+    height: 3rem;
+    bottom: 2rem;
+    right: 2rem;
+}
+
+.btn-exit:hover {
+    background-color: rgb(41, 121, 255);
+}
+
+.btn-yes, 
+.btn-no {
+    width: 7rem;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+#modal-confirmation {
+    height: 40%;
+    color: black;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-flow: column;
+}   
+
+.congratulations-message {
+    font-weight: 600;
+    display: block;
+    padding: 15px;
+    border-bottom: 1px solid grey;
+}

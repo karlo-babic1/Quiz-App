@@ -1,1 +1,1 @@
-# Quiz-App
+# Quiz App built with JavaScript and Firebase
